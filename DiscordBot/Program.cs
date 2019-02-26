@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace DiscordBot
 {
@@ -7,7 +8,7 @@ namespace DiscordBot
         private static void Main()
         {
             Unity.RegisterTypes();
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello, Discord!");
         }
     }
 }

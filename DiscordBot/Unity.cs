@@ -1,6 +1,8 @@
 ﻿using DiscordBot.Storage;
 using DiscordBot.Storage.Implementations;
 using Unity;
+using Unity.Lifetime;
+using Unity.Resolution;
 
 namespace DiscordBot
 {
@@ -21,7 +23,7 @@ namespace DiscordBot
         public static void RegisterTypes()
         {
             _container = new UnityContainer();
-            _container.RegisterType<IDataStorage, InMemoryStorage>();
+            _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
         }
 
         public static T Resolve<T>()

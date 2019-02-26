@@ -16,6 +16,8 @@ namespace DiscordBot
                 Token = "ABC",
                 SocketConfig = SocketConfig.GetDefault()
             };
+
+            var connection = Unity.Resolve<Connection>();
         }
     }
 }
